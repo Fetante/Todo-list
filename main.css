@@ -29,7 +29,13 @@ body {
 h1 {
   font-size: 50px;
   letter-spacing: 2px;
+  animation: inputFade 1s forwards
 }
+
+.blinkers{
+  animation: blink 1s forwards;
+}
+
 
 p {
   font-size: 25px;
@@ -39,6 +45,8 @@ p {
 #input {
   width: 250px;
   font-family: "Coming Soon", "Handwriting";
+  visibility: hidden;
+  animation: inputFade 1.3s forwards;  
 }
 
 .completed {
@@ -46,8 +54,6 @@ p {
   color: grey;
   transition: color 2s;
 }
-
-
 
 ul {
   display: table;
@@ -60,6 +66,7 @@ ul {
 
 #addBtn{
     height: 25px;
+    animation: inputFade 1.3s forwards;
 }
 
 button:hover {  
@@ -78,6 +85,10 @@ li {
 
 li:hover {  
   cursor: pointer;  
+}
+
+#completed{
+  animation: inputFade 1.1s forwards;
 }
 
 .trashCan {
@@ -101,6 +112,13 @@ li:hover {
   }
 }
 
+@keyframes inputFade{
+  0% {opacity: 0;}
+  80%{opacity: 0;}
+  100% {visibility: visible;
+        opacity: 1;}
+}
+
 @keyframes fadeUpp{
   0% {top: 30px;}
   100% {top: 0px;}
@@ -118,8 +136,4 @@ li:hover {
   66% {color: red;}
   83% {color: white;}
   100% {color: red;}
-}
-
-@keyframes fadeToGray{
-
 }
