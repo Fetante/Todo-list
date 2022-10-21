@@ -81,9 +81,7 @@ function addTodo() {
     const selectedIndex = todoArray.findIndex((item)=> item.id == e);
 
     todoArray.splice(selectedIndex, 1);
-    
-
-  }
+    }
 
   /* When click on the trashcan: Control if the task is done,
    * if so then decrement completed task by one. Remove the task
